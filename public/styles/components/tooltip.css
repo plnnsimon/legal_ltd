@@ -1,4 +1,4 @@
-@import '/src/styles/colors/index.css';
+@import '../colors/index.css';
 
 .custom-tooltip {
   position: fixed;

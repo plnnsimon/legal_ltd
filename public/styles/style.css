@@ -1,13 +1,13 @@
-@import '/src/styles/components/button.css';
-@import '/src/styles/components/input.css';
-@import '/src/styles/components/tooltip.css';
-@import '/src/styles/sections/header.css';
-@import '/src/styles/sections/advantages.css';
-@import '/src/styles/sections/procedure.css';
-@import '/src/styles/sections/reviews.css';
-@import '/src/styles/sections/consult-form.css';
-@import '/src/styles/sections/map.css';
-@import '/src/styles/colors/index.css';
+@import './components/button.css';
+@import './components/input.css';
+@import './components/tooltip.css';
+@import './sections/header.css';
+@import './sections/advantages.css';
+@import './sections/procedure.css';
+@import './sections/reviews.css';
+@import './sections/consult-form.css';
+@import './sections/map.css';
+@import './colors/index.css';
 
 * {
   padding: 0;

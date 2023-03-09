@@ -2,10 +2,10 @@ var webpack = require('webpack');
 const dotenv = require('dotenv').config({ path: '.env' });
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './public/app.js',
   mode: 'development',
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/public`,
     filename: 'bundle.js'
   },
   module: {

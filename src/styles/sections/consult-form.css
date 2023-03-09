@@ -1,0 +1,43 @@
+.consult-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.consult-form.consult-form_free {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 10px;
+}
+
+.consult-form.consult-form_free {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.consult-form__content {
+  display: grid;
+  align-items: center;
+  grid-row-gap: 10px;
+  max-width: 345px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-input {}
+
+.consult-form__submit {
+  display: flex;
+}
+
+.consult-form__submit .button {
+  border-radius: 4px;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 756px) {
+  .consult-form.consult-form_free {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+@import '/src/styles/colors/index.css';
+
+.button {
+  outline: none;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--button-color);
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all ease .3s;
+  text-align: center;
+  box-shadow: 0px 0px 5px var(--button-color);
+  height: fit-content;
+  transition: opacity ease 0.3s, background-color ease 0.3s, color ease 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 2px rgb(0, 0, 0);
+
+  background-color: white;
+  box-shadow: 0px 0px 10px -3px black;
+  color: var(--text-color);
+}
+
+.button:disabled {
+  pointer-events: none;
+  background: #98abc2;
+  box-shadow: none;
+}

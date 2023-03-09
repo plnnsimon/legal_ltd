@@ -1,0 +1,18 @@
+.procedure {
+  background: white;
+  padding: 80px 15px;
+}
+
+.procedure__container {
+
+}
+
+.procedure__head {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.procedure__head-title {
+  margin-bottom: 50px;
+}

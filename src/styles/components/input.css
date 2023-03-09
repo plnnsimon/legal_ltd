@@ -1,0 +1,53 @@
+.input-block {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.input-block__component {
+  outline: none;
+  appearance: none;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid rgba(128, 128, 128, 0.562);
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 200px;
+  min-height: 50px;
+}
+
+select {
+  display: grid;
+  grid-template-areas: "select";
+  cursor: pointer;
+  align-items: center;
+}
+
+.input-block.select::after {
+  content: "";
+  width: 15px;
+  height: 10px;
+  background-color: black;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  pointer-events: none;
+}
+
+select,
+select::after {
+  grid-area: select;
+}

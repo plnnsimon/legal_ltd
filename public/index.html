@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://static.tildacdn.com/tild3535-6461-4539-a536-663063306130/-/resize/504x/ukraine-flag-monumen.jpg"
+      content="./static/images/main/main.jpg"
     />
     <!-- <link rel="canonical" href="https://kyivlegal.com.ua" /> -->
     <!--/metatextblock-->
@@ -50,31 +50,9 @@
     />
     <link
       rel="stylesheet"
-      href="https://static.tildacdn.com/css/tilda-animation-2.0.min.css"
-      type="text/css"
-      media="all"
-      onerror="this.loaderr='y';"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static.tildacdn.com/css/tilda-forms-1.0.min.css"
-      type="text/css"
-      media="all"
-      onerror="this.loaderr='y';"
-    />
-    <link
-      rel="stylesheet"
       href="https://static.tildacdn.com/css/tilda-cover-1.0.min.css"
       type="text/css"
       media="all"
-      onerror="this.loaderr='y';"
-    />
-    <link
-      rel="stylesheet"
-      href="https://static.tildacdn.com/css/tilda-slds-1.4.min.css"
-      type="text/css"
-      media="print"
-      onload="this.media='all';"
       onerror="this.loaderr='y';"
     />
     <noscript
@@ -90,101 +68,6 @@
       src="https://static.tildacdn.com/js/rentafont_webfonts.js"
       charset="utf-8"
     ></script>
-    <!-- <script type="text/javascript">
-      (function (d) {
-        if (!d.visibilityState) {
-          var s = d.createElement('script');
-          s.src = 'https://static.tildacdn.com/js/tilda-polyfill-1.0.min.js';
-          d.getElementsByTagName('head')[0].appendChild(s);
-        }
-      })(document);
-      function t_onReady(func) {
-        if (document.readyState != 'loading') {
-          func();
-        } else {
-          document.addEventListener('DOMContentLoaded', func);
-        }
-      }
-      function t_onFuncLoad(funcName, okFunc, time) {
-        if (typeof window[funcName] === 'function') {
-          okFunc();
-        } else {
-          setTimeout(function () {
-            t_onFuncLoad(funcName, okFunc, time);
-          }, time || 100);
-        }
-      }
-      function t396_initialScale(t) {
-        var e = document.getElementById('rec' + t);
-        if (e) {
-          var r = e.querySelector('.t396__artboard');
-          if (r) {
-            var a,
-              i = document.documentElement.clientWidth,
-              l = [],
-              d = r.getAttribute('data-artboard-screens');
-            if (d) {
-              d = d.split(',');
-              for (var o = 0; o < d.length; o++) l[o] = parseInt(d[o], 10);
-            } else l = [320, 480, 640, 960, 1200];
-            for (o = 0; o < l.length; o++) {
-              var n = l[o];
-              n <= i && (a = n);
-            }
-            var g =
-                'edit' === window.allrecords.getAttribute('data-tilda-mode'),
-              u = 'center' === t396_getFieldValue(r, 'valign', a, l),
-              c = 'grid' === t396_getFieldValue(r, 'upscale', a, l),
-              t = t396_getFieldValue(r, 'height_vh', a, l),
-              f = t396_getFieldValue(r, 'height', a, l),
-              e =
-                (!!window.opr && !!window.opr.addons) ||
-                !!window.opera ||
-                -1 !== navigator.userAgent.indexOf(' OPR/');
-            if (!g && u && !c && !t && f && !e) {
-              for (
-                var s = parseFloat((i / a).toFixed(3)),
-                  _ = [
-                    r,
-                    r.querySelector('.t396__carrier'),
-                    r.querySelector('.t396__filter')
-                  ],
-                  o = 0;
-                o < _.length;
-                o++
-              )
-                _[o].style.height = parseInt(f, 10) * s + 'px';
-              for (
-                var h = r.querySelectorAll('.t396__elem'), o = 0;
-                o < h.length;
-                o++
-              )
-                h[o].style.zoom = s;
-            }
-          }
-        }
-      }
-      function t396_getFieldValue(t, e, r, a) {
-        var i = a[a.length - 1],
-          l =
-            r === i
-              ? t.getAttribute('data-artboard-' + e)
-              : t.getAttribute('data-artboard-' + e + '-res-' + r);
-        if (!l)
-          for (var d = 0; d < a.length; d++) {
-            var o = a[d];
-            if (
-              !(o <= r) &&
-              (l =
-                o === i
-                  ? t.getAttribute('data-artboard-' + e)
-                  : t.getAttribute('data-artboard-' + e + '-res-' + o))
-            )
-              break;
-          }
-        return l;
-      }
-    </script> -->
     <script
       src="https://static.tildacdn.com/js/jquery-1.10.2.min.js"
       charset="utf-8"
@@ -215,19 +98,7 @@
       onerror="this.loaderr='y';"
     ></script>
     <script
-      src="https://static.tildacdn.com/js/tilda-forms-1.0.min.js"
-      charset="utf-8"
-      async
-      onerror="this.loaderr='y';"
-    ></script>
-    <script
       src="https://static.tildacdn.com/js/tilda-cover-1.0.min.js"
-      charset="utf-8"
-      async
-      onerror="this.loaderr='y';"
-    ></script>
-    <script
-      src="https://static.tildacdn.com/js/tilda-slds-1.4.min.js"
       charset="utf-8"
       async
       onerror="this.loaderr='y';"
@@ -239,26 +110,11 @@
       onerror="this.loaderr='y';"
     ></script>
     <script
-      src="https://static.tildacdn.com/js/tilda-animation-ext-1.0.min.js"
-      charset="utf-8"
-      async
-      onerror="this.loaderr='y';"
-    ></script>
-    <script
       src="https://static.tildacdn.com/js/tilda-zero-scale-1.0.min.js"
       charset="utf-8"
       async
       onerror="this.loaderr='y';"
     ></script>
-    <script
-      src="https://static.tildacdn.com/js/tilda-events-1.0.min.js"
-      charset="utf-8"
-      async
-      onerror="this.loaderr='y';"
-    ></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-    </script>
   </head>
   <body class="t-body" style="margin: 0">
     <!--allrecords-->
@@ -279,7 +135,7 @@
         data-animationappear="off"
         data-record-type="396"
       >
-        <!-- T396 --><style>
+        <style>
           #rec508686324 .t396__artboard {
             height: 80px;
             background-color: #ffffff;
@@ -585,29 +441,15 @@
           id="recorddiv508698093"
           bgimgfield="img"
           style="
-            height: 60vh;
+            height: 100%;
             background-image: url('./static/images/main/main.jpg');
+            display: grid;
           "
         >
           <div
-            class="t-cover__carrier"
-            id="coverCarry508698093"
-            data-content-cover-id="508698093"
-            data-content-cover-bg="./static/images/main/main.jpg"
-            data-display-changed="true"
-            data-content-cover-height="60vh"
-            data-content-cover-parallax="fixed"
-            style="height: 60vh"
-            itemscope
-            itemtype="http://schema.org/ImageObject"
-          >
-            <meta itemprop="image" content="./static/images/main/main.jpg" />
-          </div>
-
-          <div
             class="t-cover__filter"
             style="
-              height: 60vh;
+              height: 100%;
               background-image: -moz-linear-gradient(
                 top,
                 rgba(0, 0, 0, 0.7),
@@ -638,8 +480,8 @@
           ></div>
 
           <div class="t1016">
-            <div class="t-container">
-              <div class="t-width t-width_12 t1016__mainblock">
+            <div class="main-content">
+              <div class="main-content__container">
                 <div
                   class="t-cover__wrapper t-valign_middle"
                   style="height: 60vh"
@@ -2083,11 +1925,11 @@
                       Мене незаконно оштрафували за начебто керування машини в
                       алкогольному сп’янінні. Поліцейський вимагав хабаря, я
                       вимушений був звернутися за юридичною допомогою до
-                      Київського правового центру. Ми не тільки домоглися
+                      Дніпропетровського правового центру. Ми не тільки домоглися
                       скасування постанови щодо штрафу у розмірі 17 000 грн, а й
                       наразі триває розслідування щодо вимагання хабаря
                       поліцейським. Дуже дякую за оперативну та професійну
-                      допомогу всім юристам Київського правового центру, а саме
+                      допомогу всім юристам Дніпропетровського правового центру, а саме
                       Євгену Віталійовичу.
                     </div>
                   </div>
@@ -2186,28 +2028,14 @@
           id="recorddiv508686348"
           bgimgfield="img"
           style="
-            height: 100vh;
+            height: 100%;
             background-image: url('./static/images/main/main.jpg');
           "
         >
           <div
-            class="t-cover__carrier"
-            id="coverCarry508686348"
-            data-content-cover-id="508686348"
-            data-content-cover-bg="./static/images/main/main.jpg"
-            data-display-changed="true"
-            data-content-cover-height="100vh"
-            data-content-cover-parallax=""
-            style="height: 100vh; background-attachment: scroll"
-            itemscope
-            itemtype="http://schema.org/ImageObject"
-          >
-            <meta itemprop="image" content="./static/images/main/main.jpg" />
-          </div>
-          <div
             class="t-cover__filter"
             style="
-              height: 100vh;
+              height: 100%;
               background-image: -moz-linear-gradient(
                 top,
                 rgba(0, 0, 0, 0.7),
@@ -2237,11 +2065,11 @@
             "
           ></div>
           <div class="t1016">
-            <div class="t-container">
-              <div class="t-width t-width_12 t1016__mainblock">
+            <div class="main-content">
+              <div class="main-content__container">
                 <div
                   class="t-cover__wrapper t-valign_middle"
-                  style="height: 100vh"
+                  style="height: 100%"
                 >
                   <div class="t1016__content" data-hook-content="covercontent">
                     <div class="t1016__textwrapper t-width t-width_8">

@@ -26,6 +26,21 @@ h2 {
   font-size: 40px;
 }
 
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.main-content__container {
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
 .review-wrapper {
   display: flex;
   grid-gap: 10px;

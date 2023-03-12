@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 15px;
   right: 15px;
+  margin-left: 10px;
   border-radius: 4px;
   padding: 20px;
   min-width: 200px;
@@ -14,6 +15,12 @@
   pointer-events: none;
   display: block;
   z-index: 10;
+}
+
+@media screen and (max-width: 756px) {
+  .custom-tooltip {
+    right: 10px !important;
+  }
 }
 
 .custom-tooltip.error {

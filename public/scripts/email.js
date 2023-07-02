@@ -67,7 +67,7 @@ async function handleFormSubmit(form) {
     return;
   }
 
-  sendEmail(
+  await sendEmail(
     {
       name: data.name || 'Клієнт',
       phone: data.phone,
@@ -76,7 +76,34 @@ async function handleFormSubmit(form) {
       message: data.message || '...'
     },
     form
-  );
+  )
+
+  await sendToTelegram(data)
+}
+
+async function sendToTelegram(data) {
+  if (!data) {
+    throw Error('No data provided')
+  }
+
+  try {
+    fetch(`https://api.telegram.org/bot${process.env.TG_BOT_TOCKEN}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: process.env.TG_CHAT_ID,
+        text: `
+          <b>Ім'я:</b> <i>${data.name || 'Клієнт'}</i>\n<b>Телефон:</b> <a href="tel:${data.phone}">${data.phone}</a>\n<b>Спеціалізація:</b> <i>${data.service || '...'}</i>\n<b>Місто:</b> <i>${data.town || '...'}</i>\n<b>Текст:</b> ${data.message || '...'}
+        `,
+        parse_mode: 'HTML'
+      }),
+    })
+  } catch (err) {
+    console.error(err);
+  }
+
 }
 
 async function sendEmail(options, form) {

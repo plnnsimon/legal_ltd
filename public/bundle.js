@@ -255,7 +255,7 @@ eval("function validPhone(phone) {\r\n  var regex = /^(\\d{10}|\\d{12})$/;\r\n  
   \***************************************/
 /***/ (() => {
 
-eval("const buttonsToFollow = document.getElementsByClassName('g-tag-event')\r\n\r\nfor (const button of buttonsToFollow) {\r\n  button.addEventListener('click', gtagReportConversion)\r\n}\r\n\r\n\r\nfunction gtagReportConversion(url) {\r\n  try {\r\n    const callback = () => {\r\n      if (typeof(url) != 'undefined') {\r\n        window.location = url;\r\n      }\r\n    };\r\n  \r\n    gtag('event', 'conversion', {\r\n        'send_to': 'AW-10980539371/M4U6CLL9nOgYEOv39vMo',\r\n        'event_callback': callback\r\n    });\r\n    return false;\r\n  } catch (err) {\r\n    console.error(err);\r\n  }\r\n}\n\n//# sourceURL=webpack:///./public/scripts/g-tag-event.js?");
+eval("// const buttonsToFollow = document.getElementsByClassName('g-tag-event')\r\n\r\n// for (const button of buttonsToFollow) {\r\n//   button.addEventListener('click', gtagReportConversion)\r\n// }\r\n\r\n\r\nfunction gtagReportConversion(url) {\r\n  try {\r\n    const callback = () => {\r\n      if (typeof(url) != 'undefined') {\r\n        window.location = url;\r\n      }\r\n    };\r\n  \r\n    gtag('event', 'conversion', {\r\n        'send_to': 'AW-10980539371/M4U6CLL9nOgYEOv39vMo',\r\n        'event_callback': callback\r\n    });\r\n    console.log('event sent');\r\n    return false;\r\n  } catch (err) {\r\n    console.error(err);\r\n  }\r\n}\n\n//# sourceURL=webpack:///./public/scripts/g-tag-event.js?");
 
 /***/ }),
 

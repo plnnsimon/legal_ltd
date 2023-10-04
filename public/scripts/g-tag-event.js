@@ -1,8 +1,8 @@
-const buttonsToFollow = document.getElementsByClassName('g-tag-event')
+// const buttonsToFollow = document.getElementsByClassName('g-tag-event')
 
-for (const button of buttonsToFollow) {
-  button.addEventListener('click', gtagReportConversion)
-}
+// for (const button of buttonsToFollow) {
+//   button.addEventListener('click', gtagReportConversion)
+// }
 
 
 function gtagReportConversion(url) {
@@ -17,6 +17,7 @@ function gtagReportConversion(url) {
         'send_to': 'AW-10980539371/M4U6CLL9nOgYEOv39vMo',
         'event_callback': callback
     });
+    console.log('event sent');
     return false;
   } catch (err) {
     console.error(err);

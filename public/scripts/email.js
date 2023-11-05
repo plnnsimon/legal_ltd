@@ -30,7 +30,7 @@ function getFormData(form) {
   const formData = {};
   fields.forEach(function (el) {
     if (!el) {
-      return
+      return;
     }
 
     const name = el.name;
@@ -62,7 +62,7 @@ async function handleFormSubmit(form) {
   const data = getFormData(form);
 
   if (data.phone && !validPhone(data.phone)) {
-    createTooltip('error', 'Телефон заповнено не корректно!')
+    createTooltip('error', 'Телефон заповнено не корректно!');
     disableAllButtons(form);
     return;
   }
@@ -78,12 +78,16 @@ async function handleFormSubmit(form) {
     form
   )
 
-  await sendToTelegram(data)
+  if (data.town === 'м. Одеса') {
+    await sendToTelegram(data, process.env.TG_ODESA_CHAT_ID);
+  } else {
+    await sendToTelegram(data, process.env.TG_CHAT_ID);
+  }
 }
 
-async function sendToTelegram(data) {
+async function sendToTelegram(data, chatId) {
   if (!data) {
-    throw Error('No data provided')
+    throw Error('No data provided');
   }
 
   try {
@@ -93,7 +97,7 @@ async function sendToTelegram(data) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        chat_id: process.env.TG_CHAT_ID,
+        chat_id: chatId,
         text: `
           <b>Ім'я:</b> <i>${data.name || 'Клієнт'}</i>\n<b>Телефон:</b> <a href="tel:${data.phone}">${data.phone}</a>\n<b>Спеціалізація:</b> <i>${data.service || '...'}</i>\n<b>Місто:</b> <i>${data.town || '...'}</i>\n<b>Текст:</b> ${data.message || '...'}
         `,
@@ -103,7 +107,6 @@ async function sendToTelegram(data) {
   } catch (err) {
     console.error(err);
   }
-
 }
 
 async function sendEmail(options, form) {
@@ -122,10 +125,13 @@ async function sendEmail(options, form) {
       process.env.PUBLIC_KEY
     );
     form.reset();
-    createTooltip('success', 'Дякуємо, що скористалися нашими послугами, чекайте на дзвінок!')
+    createTooltip(
+      'success',
+      'Дякуємо, що скористалися нашими послугами, чекайте на дзвінок!'
+    );
   } catch (err) {
     console.error(err);
-    createTooltip('error', err.text)
+    createTooltip('error', err.text);
   } finally {
     enableAllButtons(form);
   }
@@ -184,6 +190,6 @@ function createTooltip(type, message) {
   }, 4000);
 
   setTimeout(() => {
-    div.innerText = ''
+    div.innerText = '';
   }, 4500);
 }
